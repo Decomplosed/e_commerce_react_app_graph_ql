@@ -25,7 +25,7 @@ const CollectionsOvierviewContainer = () => (
     {({ loading, error, data }) => {
       console.log({ loading })
       console.log({ data })
-      console.log({ loading })
+      console.log({ error })
       if (loading) return <Spinner />
       return <CollectionsOvierview collections={data.collections} />
     }}
