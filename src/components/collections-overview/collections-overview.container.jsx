@@ -22,8 +22,12 @@ const GET_COLLECTIONS = gql`
 
 const CollectionsOvierviewContainer = () => (
   <Query query={GET_COLLECTIONS}>
-    {
-      
-    }
+    {({ loading, error, data }) => {
+      console.log({ loading })
+      console.log({ data })
+      console.log({ loading })
+      if (loading) return <Spinner />
+      return <CollectionsOvierview collections={data.collections} />
+    }}
   </Query>
 )
