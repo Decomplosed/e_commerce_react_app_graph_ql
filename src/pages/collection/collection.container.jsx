@@ -27,6 +27,7 @@ const CollectionPageContainer = ({ match }) => (
   >
     {({ loading, data: { getCollectionsByTitle } }) => {
       if (loading) return <Spinner />
+      return <CollectionPage collection={getCollectionsByTitle} />
     }}
   </Query>
 )
