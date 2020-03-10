@@ -21,4 +21,4 @@ const CollectionPage = ({ collection }) => {
   )
 }
 
-export default connect(mapStateToProps)(CollectionPage)
+export default CollectionPage
