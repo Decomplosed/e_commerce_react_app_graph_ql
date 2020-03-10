@@ -31,3 +31,5 @@ const CollectionsOvierviewContainer = () => (
     }}
   </Query>
 )
+
+export default CollectionsOvierviewContainer
