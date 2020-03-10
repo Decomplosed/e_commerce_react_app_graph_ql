@@ -19,3 +19,11 @@ const GET_COLLECTIONS = gql`
     }
   }
 `
+
+const CollectionsOvierviewContainer = () => (
+  <Query query={GET_COLLECTIONS}>
+    {
+      
+    }
+  </Query>
+)
