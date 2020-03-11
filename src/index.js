@@ -22,7 +22,9 @@ const cache = new InMemoryCache()
 
 const client = new ApolloClient({
   link: httpLink,
-  cache
+  cache,
+  typeDefs,
+  resolvers
 })
 
 client.writeData({
