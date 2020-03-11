@@ -10,4 +10,8 @@ const GET_CART_HIDDEN = gql`
   }
 `
 
-const HeaderContainer = () => <Query query={GET_CART_HIDDEN}></Query>
+const HeaderContainer = () => (
+  <Query query={GET_CART_HIDDEN}>
+    {({ data: { cartHidden } }) => <Header hidden={cartHidden} />}
+  </Query>
+)
