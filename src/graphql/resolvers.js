@@ -1,4 +1,5 @@
 import { gql } from 'apollo-boost'
+import { addItemToCart } from './cart.utils'
 
 export const typeDefs = gql`
   extend type Item {
@@ -17,6 +18,12 @@ const GET_CART_HIDDEN = gql`
   }
 `
 
+const GET_CART_ITEMS = gql`
+  {
+    cartItems @client
+  }
+`
+
 export const resolvers = {
   Mutation: {
     toggleCartHidden: (_root, _args, { cache }) => {
@@ -31,8 +38,6 @@ export const resolvers = {
 
       return cartHidden
     },
-    addItemToCart: (_root, { item }, { cache }) => {
-      
-    }
+    AddItemToCart: (_root, { item }, { cache }) => {}
   }
 }
