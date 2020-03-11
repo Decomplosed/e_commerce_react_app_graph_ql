@@ -15,3 +15,5 @@ const HeaderContainer = () => (
     {({ data: { cartHidden } }) => <Header hidden={cartHidden} />}
   </Query>
 )
+
+export default HeaderContainer
