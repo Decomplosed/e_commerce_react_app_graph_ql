@@ -15,3 +15,5 @@ const CartIconContainer = () => (
     {toggleCartHidden => <CartIcon toggleCartHidden={toggleCartHidden} />}
   </Mutation>
 )
+
+export default CartIconContainer
