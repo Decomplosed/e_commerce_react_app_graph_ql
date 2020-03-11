@@ -15,8 +15,13 @@ const GET_CART_HIDDEN = gql`
 export const resolvers = {
   Mutation: {
     toggleCartHidden: (_root, _args, { cache }) => {
-      const data = cache.readQuery({
+      const { cartHidden } = cache.readQuery({
         query: GET_CART_HIDDEN
+      })
+
+      cache.writeQuery({
+        query: GET_CART_HIDDEN,
+        data: { cartHidden: !cartHidden }
       })
     }
   }
