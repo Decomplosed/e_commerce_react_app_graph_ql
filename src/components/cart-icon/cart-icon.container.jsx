@@ -10,6 +10,12 @@ const TOGGLE_CART_HIDDEN = gql`
   }
 `
 
+const GET_ITEM_COUNT = gql`
+  {
+    itemCount @client
+  }
+`
+
 const CartIconContainer = () => (
   <Mutation mutation={TOGGLE_CART_HIDDEN}>
     {toggleCartHidden => <CartIcon toggleCartHidden={toggleCartHidden} />}
