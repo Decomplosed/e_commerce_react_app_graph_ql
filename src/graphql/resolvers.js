@@ -18,6 +18,12 @@ const GET_CART_HIDDEN = gql`
   }
 `
 
+const GET_CART_ITEM_COUNT = gql`
+  {
+    itemCount @client
+  }
+`
+
 const GET_CART_ITEMS = gql`
   {
     cartItems @client
