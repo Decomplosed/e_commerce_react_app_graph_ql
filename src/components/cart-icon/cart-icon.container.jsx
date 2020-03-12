@@ -17,9 +17,8 @@ const GET_ITEM_COUNT = gql`
   }
 `
 
-const CartIconContainer = props => {
-  console.log(props)
-  return <CartIcon />
+const CartIconContainer = ({ data: { itemCount }, toggleCartHidden }) => {
+  return <CartIcon toggleCartHidden={toggleCartHidden} itemCount={itemCount} />
 }
 
 export default flowRight(
