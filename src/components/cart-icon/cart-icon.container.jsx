@@ -17,9 +17,15 @@ const GET_ITEM_COUNT = gql`
 `
 
 const CartIconContainer = () => (
-  <Mutation mutation={TOGGLE_CART_HIDDEN}>
-    {toggleCartHidden => <CartIcon toggleCartHidden={toggleCartHidden} />}
-  </Mutation>
+  <Query query={GET_ITEM_COUNT}>
+    {({ data: { itemCount } }) => (
+      <Mutation mutation={TOGGLE_CART_HIDDEN}>
+        {toggleCartHidden => (
+          <CartIcon toggleCartHidden={toggleCartHidden} itemCount={itemCount} />
+        )}
+      </Mutation>
+    )}
+  </Query>
 )
 
 export default CartIconContainer
