@@ -1,5 +1,5 @@
 import React from 'react'
-import { Mutation, Query } from 'react-apollo'
+import { Mutation, Query, graphql } from 'react-apollo'
 import { gql } from 'apollo-boost'
 
 import CartIcon from './cart-icon.component'
